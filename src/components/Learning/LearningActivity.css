@@ -1,0 +1,254 @@
+.learning-activity {
+  min-height: calc(100vh - 80px);
+  padding: 20px;
+}
+
+.activity-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.activity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.progress-indicator {
+  flex: 1;
+}
+
+.progress-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 8px;
+}
+
+.progress-bar-activity {
+  height: 15px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill-activity {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+.score-display {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--accent-color);
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.score-icon {
+  font-size: 1.5rem;
+}
+
+.activity-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.target-display {
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(135deg, #FFE5F1 0%, #E5F5FF 100%);
+  border-radius: var(--border-radius);
+}
+
+.target-label {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.target-text {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-family: var(--font-handwriting);
+}
+
+.target-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.repeat-btn,
+.hint-btn {
+  background: white;
+  color: var(--primary-color);
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  border: 2px solid var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.repeat-btn:hover,
+.hint-btn:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.hint-box {
+  background: var(--accent-color);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.mode-selector {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.mode-btn {
+  padding: 15px 30px;
+  border-radius: var(--border-radius);
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: #e0e0e0;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.mode-btn.active {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+.mode-btn:hover {
+  transform: translateY(-2px);
+}
+
+.writing-activity,
+.speaking-activity {
+  min-height: 400px;
+}
+
+.tracing-mode-selector {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tracing-btn {
+  padding: 12px 25px;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 600;
+  background: #e0e0e0;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.tracing-btn.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+.feedback-box {
+  padding: 25px;
+  border-radius: var(--border-radius);
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  animation: slideIn 0.5s ease;
+}
+
+.feedback-box.success {
+  background: var(--success-color);
+  color: white;
+}
+
+.feedback-box.error {
+  background: var(--error-color);
+  color: white;
+}
+
+.feedback-box.complete {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+}
+
+.feedback-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.feedback-message {
+  margin-bottom: 15px;
+}
+
+.next-level-btn {
+  background: white;
+  color: var(--primary-color);
+  padding: 12px 30px;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.next-item-btn {
+  background: var(--primary-color);
+  color: white;
+  padding: 15px 40px;
+  border-radius: var(--border-radius);
+  font-size: 1.1rem;
+  font-weight: 600;
+  align-self: center;
+  margin-top: 20px;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .target-text {
+    font-size: 3rem;
+  }
+  
+  .activity-header {
+    flex-direction: column;
+  }
+  
+  .mode-selector {
+    flex-direction: column;
+  }
+}

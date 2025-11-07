@@ -1,0 +1,79 @@
+.handwriting-canvas-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.canvas-wrapper {
+  border: 4px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  background: white;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.drawing-canvas {
+  display: block;
+  touch-action: none;
+  cursor: crosshair;
+  background: #FAFAFA;
+  border-radius: 10px;
+}
+
+.canvas-controls {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.clear-btn,
+.toggle-tracing-btn,
+.submit-btn {
+  padding: 12px 25px;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.clear-btn {
+  background: #e0e0e0;
+  color: var(--text-color);
+}
+
+.toggle-tracing-btn {
+  background: var(--secondary-color);
+  color: white;
+}
+
+.submit-btn {
+  background: var(--primary-color);
+  color: white;
+}
+
+.clear-btn:hover:not(:disabled),
+.toggle-tracing-btn:hover:not(:disabled),
+.submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.clear-btn:disabled,
+.submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .canvas-wrapper {
+    padding: 10px;
+  }
+  
+  .drawing-canvas {
+    width: 100%;
+    height: auto;
+  }
+}

@@ -1,0 +1,33 @@
+.learning {
+  min-height: calc(100vh - 80px);
+  padding: 40px 20px;
+}
+
+.learning-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.learning-no-profile {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.learning-no-profile p {
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+.learning-no-profile button {
+  background: var(--primary-color);
+  color: white;
+  padding: 15px 30px;
+  border-radius: var(--border-radius);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
